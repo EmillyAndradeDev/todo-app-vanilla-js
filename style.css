@@ -1,4 +1,10 @@
 /* Estilo geral */
+
+:root {
+  --cor01: #D96299;
+  --cor02: #745549;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f9;
@@ -12,7 +18,7 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 350px;
 }
 
@@ -23,25 +29,27 @@ h1 {
 
 .input-area {
   display: flex;
-  gap: 10px; 
+  gap: 10px;
 }
 
 #taskInput {
-  flex: 1; /* ocupa o máximo do espaço */
+  flex: 1;
+  /* ocupa o máximo do espaço */
   padding: 8px;
 }
 
 button {
   padding: 8px 12px;
   border: none;
-  background: #4CAF50;
+  background: var(--cor01);
   color: white;
   cursor: pointer;
   border-radius: 6px;
 }
 
 button:hover {
-  background: #45a049;
+  /* background: #45a049; */
+  background: #4CAF50;
 }
 
 ul {
@@ -52,7 +60,7 @@ ul {
 
 li {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   background: #eee;
   margin-bottom: 8px;
@@ -62,10 +70,12 @@ li {
 
 .completed {
   text-decoration: line-through;
-  color: gray;
+  /* color: gray; */
+  color: var(--cor02);
 }
 
 li input[type="checkbox"] {
   margin-right: 10px;
-  transform: scale(1.2); /* deixa o checkbox maior */
+  transform: scale(1.2);
+  /* deixa o checkbox maior */
 }
