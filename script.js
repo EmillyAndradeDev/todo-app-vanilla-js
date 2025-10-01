@@ -1,5 +1,3 @@
-// ------------------ Seleção de elementos HTML ------------------
-
 // Campo de texto para digitar a nova tarefa
 const taskInput = document.getElementById("taskInput");
 
@@ -9,12 +7,10 @@ const addTaskBtn = document.getElementById("addTask");
 // Lista onde as tarefas serão exibidas
 const taskList = document.getElementById("taskList");
 
-// ------------------ Carregamento inicial ------------------
+// Carregamento inicial 
 
 // Recupera tarefas salvas no localStorage, ou cria array vazio
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-// ------------------ Funções principais ------------------
 
 // Renderiza todas as tarefas na tela
 function renderTasks() {
@@ -24,31 +20,31 @@ function renderTasks() {
     // Cria elemento <li> para cada tarefa
     const li = document.createElement("li");
 
-    // ------------------ Checkbox ------------------
+    // Checkbox 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";       // define tipo checkbox
-    checkbox.checked = task.completed; // marca se tarefa concluída
+    checkbox.checked = task.completed; // marca tarefa concluída
     // Evento: ao clicar no checkbox, alterna conclusão da tarefa
     checkbox.addEventListener("change", () => toggleTask(index));
 
-    // ------------------ Texto da tarefa ------------------
+    // Texto da tarefa 
     const span = document.createElement("span");
     span.textContent = task.text; // define texto da tarefa
     if (task.completed) span.classList.add("completed"); // risca se concluída
 
-    // ------------------ Botão de editar ------------------
+    //Botão de editar
     const editBtn = document.createElement("button");
     editBtn.textContent = "✏️"; // ícone de lápis
     // Evento: editar tarefa ao clicar
     editBtn.addEventListener("click", () => editTask(index));
 
-    // ------------------ Botão de excluir ------------------
+    //Botão de excluir 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "🗑️"; // ícone de lixeira
     // Evento: deletar tarefa ao clicar
     deleteBtn.addEventListener("click", () => deleteTask(index));
 
-    // ------------------ Montagem do <li> ------------------
+    // Montagem do <li>
     li.appendChild(checkbox);  // adiciona checkbox
     li.appendChild(span);      // adiciona texto
     li.appendChild(editBtn);   // adiciona botão editar
@@ -77,28 +73,26 @@ function addTask() {
   renderTasks();
 }
 
-// Alterna entre "concluída" e "não concluída" ao marcar/desmarcar checkbox
+// Alterna entre "concluída" e "não concluída"
 function toggleTask(index) {
   tasks[index].completed = !tasks[index].completed;
   renderTasks(); // redesenha lista atualizada
 }
 
-// Edita uma tarefa existente
+// Edita a tarefa existente
 function editTask(index) {
   const newText = prompt("Edite a tarefa:", tasks[index].text); // abre prompt
   if (newText !== null && newText.trim() !== "") { // verifica se não cancelou ou vazio
     tasks[index].text = newText.trim(); // atualiza texto
-    renderTasks(); // redesenha lista
+    renderTasks(); // refaz lista
   }
 }
 
 // Deleta uma tarefa
 function deleteTask(index) {
   tasks.splice(index, 1); // remove do array
-  renderTasks();           // redesenha lista
+  renderTasks();         
 }
-
-// ------------------ Eventos ------------------
 
 // Clique no botão "Adicionar"
 addTaskBtn.addEventListener("click", addTask);

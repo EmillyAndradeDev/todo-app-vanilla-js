@@ -16,25 +16,21 @@ body {
   width: 350px;
 }
 
-/* Título */
 h1 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Área do input */
 .input-area {
   display: flex;
-  gap: 10px; /* espaço entre input e botão */
+  gap: 10px; 
 }
 
-/* Input */
 #taskInput {
   flex: 1; /* ocupa o máximo do espaço */
   padding: 8px;
 }
 
-/* Botões */
 button {
   padding: 8px 12px;
   border: none;
@@ -48,17 +44,15 @@ button:hover {
   background: #45a049;
 }
 
-/* Lista */
 ul {
   list-style: none;
   padding: 0;
   margin-top: 20px;
 }
 
-/* Cada item da lista */
 li {
   display: flex;
-  justify-content: space-between; /* texto de um lado, botões do outro */
+  justify-content: space-between; 
   align-items: center;
   background: #eee;
   margin-bottom: 8px;
@@ -66,7 +60,6 @@ li {
   border-radius: 6px;
 }
 
-/* Estilo quando a tarefa está concluída */
 .completed {
   text-decoration: line-through;
   color: gray;
