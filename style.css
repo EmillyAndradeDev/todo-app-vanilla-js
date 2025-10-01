@@ -79,3 +79,19 @@ li input[type="checkbox"] {
   transform: scale(1.2);
   /* deixa o checkbox maior */
 }
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  color: #555;
+  font-size: 14px;
+}
+a {
+  color: var(--cor02);
+}
+
+a:hover{
+  color: var(--cor01);
+}
