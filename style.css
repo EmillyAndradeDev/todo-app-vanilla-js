@@ -1,0 +1,78 @@
+/* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* Caixa central */
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 350px;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Área do input */
+.input-area {
+  display: flex;
+  gap: 10px; /* espaço entre input e botão */
+}
+
+/* Input */
+#taskInput {
+  flex: 1; /* ocupa o máximo do espaço */
+  padding: 8px;
+}
+
+/* Botões */
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+/* Lista */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Cada item da lista */
+li {
+  display: flex;
+  justify-content: space-between; /* texto de um lado, botões do outro */
+  align-items: center;
+  background: #eee;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* Estilo quando a tarefa está concluída */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2); /* deixa o checkbox maior */
+}
