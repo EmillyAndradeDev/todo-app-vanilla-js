@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,35 @@
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <div class="container">
-    <h1>Lista de Tarefas ✅</h1>
 
-    <!-- Área de input + botão -->
-    <div class="input-area">
-      <input type="text" id="taskInput" placeholder="Digite uma tarefa...">
-      <button id="addTask">Adicionar</button>
+  <header class="fixed-header">
+    <div class="header-content">
+      <img class="logo-pequeno" src="assets/img/logo-EmillyAndradeDev.png" alt="Logo de Emilly Andrade">
+      <h1 class="logo">EmillyAndrade<span class="realce">DEV</span></h1>
     </div>
+  </header>
 
-    <!-- Lista onde as tarefas aparecerão -->
-    <ul id="taskList"></ul>
+  <main class="content-wrapper">
+    <div class="container">
+      <h1>Lista de Tarefas ✅</h1>
 
-    <footer>
+      <div class="input-area">
+        <input type="text" id="taskInput" placeholder="Digite uma tarefa...">
+        <button id="addTask">Adicionar</button>
+      </div>
+
+      <ul id="taskList"></ul>
+  </main>
+
+  <footer>
     <p>Desenvolvido por <a href="https://github.com/EmillyAndradeDev" target="_blank">EmillyAndradeDev</a></p>
   </footer>
 
   </div>
 
-  <!-- Importa o JS -->
   <script src="script.js"></script>
 </body>
+
 </html>

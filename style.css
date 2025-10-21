@@ -1,16 +1,27 @@
-/* Estilo geral */
-
 :root {
   --cor01: #D96299;
   --cor02: #745549;
+  --cor03: #43291F;
+  --cor04: #fff; 
+  --header-height: 60px;
 }
 
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f9;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
-  padding: 30px;
+  align-items: center;
+  padding: var(--header-height);
+  padding-bottom: 30px;
 }
 
 /* Caixa central */
@@ -20,6 +31,50 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 350px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--cor03);
+  color: var(--cor04);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-pequeno {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.logo {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.logo .realce {
+  color: var(--cor01);
+}
+
+.fixed-header h1 {
+  margin: 0;
+  font: 1.2em;
 }
 
 h1 {
@@ -34,7 +89,6 @@ h1 {
 
 #taskInput {
   flex: 1;
-  /* ocupa o máximo do espaço */
   padding: 8px;
 }
 
@@ -48,7 +102,6 @@ button {
 }
 
 button:hover {
-  /* background: #45a049; */
   background: #4CAF50;
 }
 
@@ -70,26 +123,27 @@ li {
 
 .completed {
   text-decoration: line-through;
-  /* color: gray; */
   color: var(--cor02);
 }
 
 li input[type="checkbox"] {
   margin-right: 10px;
   transform: scale(1.2);
-  /* deixa o checkbox maior */
 }
 
 footer {
+  width: 100%;
+  background: var(--cor03);
+  color: var(--cor04);
   text-align: center;
-  margin-top: 30px;
-  padding-top: 10px;
-  border-top: 1px solid #ddd;
-  color: #555;
+  padding: 15px 0;
   font-size: 14px;
+  margin-top: auto;
+  border-top: auto;
+
 }
 a {
-  color: var(--cor02);
+  color: var(--cor01);
 }
 
 a:hover{
