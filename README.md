@@ -27,7 +27,7 @@
 
 ## 🎨 Screenshot
 
-![Screenshot of To-Do App](screenshot02.jpeg) 
+![Screenshot of To-Do App](todolist02.jpeg) 
 
 ---
 
