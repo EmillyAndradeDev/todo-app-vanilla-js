@@ -67,3 +67,8 @@ ___
 
 This project is open-source and free to use.
 
+---
+
+### 🌐 View the Project Online
+You can find the **To-Do App** directly on GitHub Pages:
+- [ To-Do App](https://emillyandradedev.github.io/todo-app-vanilla-js/)
