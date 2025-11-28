@@ -5,38 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Tarefas</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
-  <header class="fixed-header">
-    <div class="header-content">
-      <img class="logo-pequeno" src="assets/img/logo-EmillyAndradeDev.png" alt="Logo de Emilly Andrade">
-      <h1 class="logo">EmillyAndrade<span class="realce">DEV</span></h1>
-    </div>
-  </header>
-
   <main class="content-wrapper">
-    <div class="container">
-      <h1>Lista de Tarefas ✅</h1>
+    <section class="container"> <h1>Minhas tarefas:</h1>
 
-      <div class="input-area">
-        <input type="text" id="taskInput" placeholder="Digite uma tarefa...">
-        <button id="addTask">Adicionar</button>
-      </div>
+      <form class="input-area">
+        <label for="taskInput" class="sr-only">Nova tarefa</label>
+        <input type="text" id="taskInput" placeholder="Digite uma tarefa..." autocomplete="off">
+        <button type="submit" id="addTask">Adicionar</button>
+      </form>
 
       <ul id="taskList"></ul>
-  </main>
+    </section> </main>
 
-  <footer>
-    <p>Desenvolvido por <a href="https://github.com/EmillyAndradeDev" target="_blank">EmillyAndradeDev</a></p>
-  </footer>
-
-  </div>
-
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
