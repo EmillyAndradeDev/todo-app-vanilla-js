@@ -27,7 +27,7 @@
 
 ## 🎨 Screenshot
 
-![Screenshot of To-Do App](todolist02.jpeg) 
+![Screenshot of To-Do App](assets/img/screenshot.png) 
 
 ---
 
@@ -46,11 +46,16 @@
 ### 📂 Folder Structure
 
 ```
-to-do-app/
-├─ index.html
-├─ style.css
-├─ script.js
-└─ README.md
+todo-app-vanilla-js/
+├── assets/     # imagens, ícones, fontes
+│   └── img/
+├── css/        # arquivos de estilo
+│   └── style.css
+├── js/         # scripts
+│   └── script.js
+├── index.html
+└── README.md
+
 ```
 
 ---
