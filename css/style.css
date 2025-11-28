@@ -1,8 +1,9 @@
 :root {
-  --cor01: #D96299;
-  --cor02: #745549;
-  --cor03: #43291F;
+  --cor01: #385773;
+  --cor02: #5A90BF;
+  --cor03: #385773;
   --cor04: #fff; 
+  --hover: #F2B366;
   --header-height: 60px;
 }
 
@@ -24,7 +25,6 @@ body {
   padding-bottom: 30px;
 }
 
-/* Caixa central */
 .container {
   background: #fff;
   padding: 20px;
@@ -33,48 +33,6 @@ body {
   width: 350px;
   max-height: 80vh;
   overflow-y: auto;
-}
-
-.fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--header-height);
-  background-color: var(--cor03);
-  color: var(--cor04);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-pequeno {
-  height: 40px;
-  width: auto;
-  border-radius: 50%;
-}
-
-.logo {
-  font-size: 1.5em;
-  margin: 0;
-  font-weight: bold;
-}
-
-.logo .realce {
-  color: var(--cor01);
-}
-
-.fixed-header h1 {
-  margin: 0;
-  font: 1.2em;
 }
 
 h1 {
@@ -102,7 +60,7 @@ button {
 }
 
 button:hover {
-  background: #4CAF50;
+  background: var(--hover);
 }
 
 ul {
@@ -132,21 +90,14 @@ li input[type="checkbox"] {
   accent-color: var(--cor02);
 }
 
-footer {
-  width: 100%;
-  background: var(--cor03);
-  color: var(--cor04);
-  text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
-  margin-top: auto;
-  border-top: auto;
-
-}
-a {
-  color: var(--cor01);
-}
-
-a:hover{
-  color: var(--cor01);
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
